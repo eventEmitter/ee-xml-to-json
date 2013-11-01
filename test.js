@@ -1,5 +1,5 @@
 
-
+	
 
 	var   Class 		= require( "ee-class" )
 		, log 			= require( "ee-log" )
@@ -8,17 +8,14 @@
 
 
 
-	var xml2json 		= require( "./" );
-
-
-	var rules = require( "./test/rules" );
-
-
-	var xml = fs.readFileSync( "./test/aws.xml" );
+	var   xml2json 		= require( "./" )
+		, rules 		= require( "./test/rules" )
+		, xml 			= fs.readFileSync( "./test/aws.xml" )
+		, result 		= require( "./test/result.js" );
 
 
 	xml2json( xml, rules, function( err, json ){
-		if ( err ) log.trace( err );
-		else log( json );
+		assert.ifError( err );
+		assert.deepEqual( json, result, "parsed xml result does not equal to the contents of the result.js file" );
 	}.bind( this ) );
 

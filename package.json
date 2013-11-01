@@ -27,4 +27,7 @@
     }
     , "devDependencies": {}
     , "optionalDependencies": {}
+    , "scripts": {
+        "test"                      : "node test.js"
+    }
 }
