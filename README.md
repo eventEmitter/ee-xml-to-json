@@ -1,6 +1,6 @@
 # ee-xml-to-json
 
-convert xml documents to json object with obtional simple transformation rules
+convert xml documents to json objects, with support for simple transformation rules
 
 ## installation
 
@@ -15,14 +15,18 @@ convert xml documents to json object with obtional simple transformation rules
 
 	var transform = require( "ee-xml-to-json" );
 
-	var xmlString = "<ListBucketResult><MaxKeys>1000</MaxKeys><Delimiter>/</Delimiter><IsTruncated>false</IsTruncated></ListBucketResult>";
+	var xmlString = "<ListBucketResult>\
+					 	 <MaxKeys>1000</MaxKeys>\
+					 	 <Delimiter>/</Delimiter>\
+					 	 <IsTruncated>false</IsTruncated>\
+					 </ListBucketResult>";
 
 	transform( xmlString, function( err, jsonObj ){
 		log( jsonObj );
 	} );
 
 
-the library supports simple transformations from the very verbose conversion of xml to json. because every element in xml can occur multiple times the json object consists mainly of array, even for simple string attributes. using the transformations rules you can convert, compact & typecast the json object in a usable format. see the test directory for more information.
+the library supports simple transformations from the very verbose format resulting from conversion towards a more compact representation. because every element in xml can occur multiple times the json object consists mainly out of arrays. using the transformations rules you can convert, compact & typecast the json object into a more usable format. see the test directory for more information on the rules.
 
 
 	// compact the data using rules
