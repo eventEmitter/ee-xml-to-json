@@ -6,6 +6,10 @@ convert xml documents to json object with obtional simple transformation rules
 
 	npm install ee-xml-to-json
 
+## build status
+
+	[![Build Status](https://travis-ci.org/eventEmitter/ee-xml-to-json.png?branch=master)](https://travis-ci.org/eventEmitter/ee-xml-to-json)
+
 ## usage
 
 
