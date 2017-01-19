@@ -1,21 +1,18 @@
 
 	
 
-	var   Class 		= require( "ee-class" )
-		, log 			= require( "ee-log" )
-		, fs 			= require( "fs" ) 
-		, assert 		= require( "assert" );
+	const log 			= require('ee-log');
+	const fs 			= require('fs') ;
+	const assert 		= require('assert');
 
 
 
-	var   xml2json 		= require( "./" )
-		, rules 		= require( "./test/rules" )
-		, xml 			= fs.readFileSync( "./test/aws.xml" )
-		, result 		= require( "./test/result.js" );
+	const xml2json 		= require('./');
+	const rules 		= require('./test/rules');
+	const xml 			= fs.readFileSync('./test/aws.xml');
+	const result 		= require('./test/result.js');
 
 
-	xml2json( xml, rules, function( err, json ){
-		assert.ifError( err );
-		assert.deepEqual( json, result, "parsed xml result does not equal to the contents of the result.js file" );
-	}.bind( this ) );
-
+	xml2json(xml, rules).then((data) => {
+		assert.deepEqual(data, result, 'parsed xml result does not equal to the contents of the result.js file');
+	}).catch(log);
