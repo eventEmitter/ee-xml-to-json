@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-xml-to-json"
     , "description"                 : "convert xml documents to json objects, with support for simple transformation rules"
-    , "version"                     : "1.0.0"
+    , "version"                     : "1.0.1"
     , "homepage"                    : "https://github.com/eventEmitter/ee-xml-to-json"
     , "author"                      : "Michael van der Weg <michael@joinbox.com> (http://joinbox.com/)"
     , "license"                     : "MIT"
