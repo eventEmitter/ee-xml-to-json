@@ -1,5 +1,7 @@
 # ee-xml-to-json
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/ee-xml-to-json.svg)](https://greenkeeper.io/)
+
 convert xml documents to json objects, with support for simple transformation rules
 
 ## installation
